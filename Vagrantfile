@@ -130,6 +130,7 @@ Vagrant.configure(2) do |config|
      apt-get update
      apt-get install git vim python-netaddr -y
      git clone https://github.com/mattincarlsbad/ansible-arista-training-vagrant
+     git clone https://github.com/mattincarlsbad/ansible-arista-show-commands
     SHELL
   end
   
