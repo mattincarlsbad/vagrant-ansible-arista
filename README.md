@@ -35,7 +35,7 @@ The Vagrantfile in this repo will build the below network using Arista vEOS VMs 
 3. Create a directory for running the vagrant-arista lab:
    ex: U:\vagrant\arista>
 4. Copy the "Vagrantfile" contents from this repo to the new directory. 
-   Using git: "git clone https://github.qualcomm.com/itnet-dc/vagrant-ansible-arista"
+   Using git: "git clone https://github.com/mattincarlsbad/vagrant-ansible-arista"
    Or just copy/paste.  Be sure to name the file "Vagrantfile".
 5. Download the Arista vEOS image to the same directory, or post it on a web server in your network.
 
