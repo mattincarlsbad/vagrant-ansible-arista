@@ -123,12 +123,13 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.define "ansible" do |ansible|
-    ansible.vm.box = "trombik/ansible-ubuntu-16.04-amd64"
+    ansible.vm.box = "ubuntu/xenial64"
     ansible.vm.network "private_network", virtualbox__intnet: "mgmt", auto_config: false
     ansible.vm.provision "shell", inline: <<-SHELL
-     sudo ifconfig eth1 10.0.0.20/24
-     apt-get update
-     apt-get install git vim python-netaddr -y
+     sudo ifconfig enp0s8 10.0.0.20/24
+     sudo apt-get update
+     sudo apt-get install git vim python-netaddr python-pip sshpass -y
+     sudo pip install ansible
      git clone https://github.com/mattincarlsbad/ansible-arista-training-vagrant
      git clone https://github.com/mattincarlsbad/ansible-arista-show-commands
     SHELL
